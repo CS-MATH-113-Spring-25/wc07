@@ -1,0 +1,67 @@
+\documentclass[a4paper]{exam}
+
+\usepackage{amsfonts,amsmath,amsthm}
+\usepackage[a4paper]{geometry}
+\usepackage{xcolor}
+\usepackage{wasysym}
+
+
+\newcommand\N{\ensuremath{\mathbb{N}}}
+\newcommand\union{\cup}
+\newcommand\interx{\cap}
+
+\header{CS/MATH 113}{WC07: Functions and Cardinalities}{Spring 2025}
+\footer{}{Page \thepage\ of \numpages}{}
+\runningheadrule
+\runningfootrule
+
+% \printanswers
+
+\qformat{{\large\bf \thequestion. \thequestiontitle}\hfill}
+\boxedpoints
+
+\title{Weekly Challenge 07: Functions and Cardinalities}
+\author{CS/MATH 113 Discrete Mathematics}
+\date{Spring 2025}
+
+\begin{document}
+\maketitle
+
+
+
+\begin{questions}
+    \titledquestion{Counting Bijections}
+    In this problem we are going to count number of bijection over countable sets. These notions give us a powerful combinatorial tool known as permutations. First we need to define some sets and notions. 
+
+    For any $n\in \mathbb{N}$, let $[n]$ denote the set $[n] = \{i\in \mathbb{N}\mid 1 \leq i \leq n\}$. For each $n\in \mathbb{N}$, we define the set $S_n$ as follows
+    $$S_n = \{\phi: [n] \to [n] \mid \phi \text{ is a bijection from } n \text{ to } n\}$$
+    Now we define two sets containing bijections in $\mathbb{N}$. 
+    We define sets $S_{\mathcal{N}}$ and $S_{\mathbb{N}}$ such that 
+    $$S_{\mathcal{N}} = \{\phi: [n] \to [n] \mid n \in \mathbb{N} \text{ and }\phi \text{ is a bijection from } n \text{ to } n\} = \bigcup\limits_{n\in \mathbb{N}} S_n$$
+    $$S_{\mathbb{N}} = \{\phi: \mathbb{N} \to \mathbb{N} \mid \phi \text{ is a bijection from } \mathbb{N} \text{ to } \mathbb{N}\}$$
+    Both sets are defined slightly differently, leading to different cardinalities. This is an interesting result as both sets contains infinitely many automorphisms on $\mathbb{N}$ (or all subsets of $\mathbb{N}$), but one contains all automorphisms on all finite subsets of $\mathbb{N}$ and the other one contains all automorphisms on $\mathbb{N}$, but they give different cardinalities. We will now proceed to prove this.
+    \begin{parts}
+        \part[4] Show that for any $n\in \mathbb{N}$, $S_n$ is finite and $|S_{n+1}| = (n+1) \times |S_n|$. From this expression show that $|S_n| = n!$.
+        \begin{solution}
+            % Enter your solution here
+        \end{solution}
+        \part[3] Show that $S_{\mathcal{N}}$ is countable.
+        \begin{solution}
+            % Enter your solution here
+        \end{solution}
+        \part[3] Show that $S_{\mathbb{N}}$ is uncountable.
+        \begin{solution}
+            % Enter your solution here
+        \end{solution}
+    \end{parts}
+
+    \textbf{Note:} In this course, at this time we have not developed the machinery and mechanisms we need to use \emph{permutations} and \emph{combinations}, that is exactly what we are developing in this problem. Furthermore the formulas for permutations and combinations are built on the above results. So you can't use the formula for permutations and combinations in this problem.
+\end{questions}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+
+
